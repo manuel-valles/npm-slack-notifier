@@ -1,0 +1,25 @@
+{
+  "name": "npm-slack-notifier",
+  "version": "1.0.0",
+  "description": "An App to receive NPM webhook events, send them to Kafka and post them to a Slack channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manukempo/npm-slack-notifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manukempo/npm-slack-notifier/issues"
+  },
+  "homepage": "https://github.com/manukempo/npm-slack-notifier#readme",
+  "dependencies": {
+    "@slack/webhook": "^6.0.0",
+    "kafkajs": "^1.15.0",
+    "npm-hook-receiver": "^0.0.7"
+  }
+}
