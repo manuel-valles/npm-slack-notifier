@@ -5,7 +5,7 @@ const {
   BOOTSTRAP_BROKER: broker = 'localhost:9092',
   PORT: port = 3000,
   KAFKA_GROUP_ID: groupId = 'npm-slack-notifier',
-  HOOK_SECRET: secret,
+  HOOK_SECRET: secret = 'super-secret-string',
   TOPIC: topic = 'npm-package-published',
   SLACK_WEBHOOK_URL: webhookUrl,
 } = process.env;

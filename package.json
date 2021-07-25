@@ -6,7 +6,7 @@
   "scripts": {
     "start:server": "node src/server/index.js",
     "start:consumer": "node src/consumer/index.js",
-    "send:event:dev": "node src/bin/send-event  http://localhost:3000/hook super-secret-string",
+    "send:event:dev": "node bin/send-event  http://localhost:3000/hook super-secret-string",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

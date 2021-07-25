@@ -16,11 +16,11 @@ const crypto = require('crypto');
 
 const url = process.argv[2];
 const secret = process.argv[3];
-const payloadPath = 'src/fixtures/payload.json';
+const payloadPath = 'fixtures/payload.json';
 
 const help = () => {
   console.log(
-    `Please provide the url and secret. For example: 'node ./src/bin/send-event http://localhost:3000/hook super-secret-string'`
+    `Please provide the url and secret. For example: 'node bin/send-event http://localhost:3000/hook super-secret-string'`
   );
 };
 
