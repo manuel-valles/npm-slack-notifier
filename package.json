@@ -20,6 +20,6 @@
   "dependencies": {
     "@slack/webhook": "^6.0.0",
     "kafkajs": "^1.15.0",
-    "npm-hook-receiver": "^0.0.7"
+    "npm-hook-receiver": "^1.0.0"
   }
 }
