@@ -7,6 +7,7 @@ const {
   KAFKA_GROUP_ID: groupId = 'npm-slack-notifier',
   HOOK_SECRET: secret,
   TOPIC: topic = 'npm-package-published',
+  SLACK_WEBHOOK_URL: webhookUrl,
 } = process.env;
 
 const server = { port };
@@ -26,10 +27,13 @@ const app = { secret, topic, mount: '/hook' };
 
 const processor = { topic };
 
+const slack = { webhookUrl };
+
 module.exports = {
   server,
   kafka,
   consumer,
   app,
   processor,
+  slack,
 };
