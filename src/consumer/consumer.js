@@ -1,5 +1,5 @@
-module.exports = async ({ kafka, config_consumer, topic, slack }) => {
-  const consumer = kafka.consumer(config_consumer);
+module.exports = async ({ client, config_consumer, topic, slack }) => {
+  const consumer = await client.consumer(config_consumer);
 
   await consumer.connect();
   await consumer.subscribe({ topic, fromBeginning: true });

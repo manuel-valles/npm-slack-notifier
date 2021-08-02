@@ -4,8 +4,9 @@
   "description": "An App to receive NPM webhook events, send them to Kafka and post them to a Slack channel.",
   "main": "index.js",
   "scripts": {
-    "start:server": "node src/server/index.js",
-    "start:consumer": "node src/consumer/index.js",
+    "start": "(trap 'kill 0' SIGINT; yarn start:server & yarn start:consumer)",
+    "start:server": "env-cmd -f config/dev.env node src/server/index.js",
+    "start:consumer": "env-cmd -f config/dev.env node src/consumer/index.js",
     "send:event:dev": "node bin/send-event  http://localhost:3000/hook super-secret-string",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +25,8 @@
     "@slack/webhook": "^6.0.0",
     "kafkajs": "^1.15.0",
     "npm-hook-receiver": "^1.0.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }
